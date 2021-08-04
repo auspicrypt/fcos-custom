@@ -1,0 +1,29 @@
+variant: fcos
+version: 1.4.0
+passwd:
+  users:
+    - name: test_user
+      groups:
+        - wheel
+        - sudo
+      password_hash: $y$j9T$zu47d5SdBG7Ow.rkDBxf51$lPnl.mCgX2IRF48ee2sWF7j/vHt6Y1aTnTS2gGb.va5
+storage:
+  files:
+    - path: /etc/hostname
+      mode: 420
+      contents:
+        source: "data:,test.aggreko.local"
+    - path: /etc/NetworkManager/system-connections/enp1s0.nmconnection
+      mode: 0600
+      overwrite: true
+      contents:
+        inline: |
+          [connection]
+          type=ethernet
+          id="Wired connection 1"
+          interface-name=enp0s3
+
+          [ipv4]
+          method=manual
+          addresses=192.168.1.1
+          gateway=192.168.1.254

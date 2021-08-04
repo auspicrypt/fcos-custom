@@ -1,0 +1,9 @@
+##Steps used for building th eiso image:
+
+1. Create a yaml file -  config.yaml
+2. Create an ignition file using coreos-installer binary.
+--https://www.vultr.com/docs/ignition
+3. Use binary **coreos-installer** to produce ISO image.
+--https://coreos.github.io/coreos-installer/iso-embed-ignition/
+4. Use rpm-ostree to install all packages.
+5. Test it on pendrive. 
