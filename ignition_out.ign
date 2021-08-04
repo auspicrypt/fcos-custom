@@ -1,42 +1,35 @@
 {
   "ignition": {
-    "version": "3.2.0"
+    "version": "3.3.0"
+  },
+  "passwd": {
+    "users": [
+      {
+        "groups": [
+          "wheel",
+          "sudo"
+        ],
+        "name": "test_user",
+        "passwordHash": "$y$j9T$zu47d5SdBG7Ow.rkDBxf51$lPnl.mCgX2IRF48ee2sWF7j/vHt6Y1aTnTS2gGb.va5"
+      }
+    ]
   },
   "storage": {
     "files": [
       {
         "path": "/etc/hostname",
         "contents": {
-          "source": "data:,tutorial%0A"
+          "source": "data:,test.aggreko.local"
         },
         "mode": 420
       },
       {
-        "path": "/etc/profile.d/systemd-pager.sh",
+        "overwrite": true,
+        "path": "/etc/NetworkManager/system-connections/enp1s0.nmconnection",
         "contents": {
-          "source": "data:,%23%20Tell%20systemd%20to%20not%20use%20a%20pager%20when%20printing%20information%0Aexport%20SYSTEMD_PAGER%3Dcat%0A"
+          "source": "data:,%5Bconnection%5D%0Atype%3Dethernet%0Aid%3D%22Wired%20connection%201%22%0Ainterface-name%3Denp0s3%0A%0A%5Bipv4%5D%0Amethod%3Dmanual%0Aaddresses%3D192.168.1.1%0Agateway%3D192.168.1.254%0A"
         },
-        "mode": 420
-      },
-      {
-        "path": "/etc/sysctl.d/20-silence-audit.conf",
-        "contents": {
-          "source": "data:,%23%20Raise%20console%20message%20logging%20level%20from%20DEBUG%20(7)%20to%20WARNING%20(4)%0A%23%20to%20hide%20audit%20messages%20from%20the%20interactive%20console%0Akernel.printk%3D4%0A"
-        },
-        "mode": 420
-      }
-    ]
-  },
-  "systemd": {
-    "units": [
-      {
-        "dropins": [
-          {
-            "contents": "[Service]\n# Override Execstart in main unit\nExecStart=\n# Add new Execstart with `-` prefix to ignore failure`\nExecStart=-/usr/sbin/agetty --autologin core --noclear %I $TERM\n",
-            "name": "autologin-core.conf"
-          }
-        ],
-        "name": "serial-getty@ttyS0.service"
+        "mode": 384
       }
     ]
   }
