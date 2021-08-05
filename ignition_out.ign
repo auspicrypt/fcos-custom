@@ -9,7 +9,7 @@
           "wheel",
           "sudo"
         ],
-        "name": "test_user",
+        "name": "fcos_user",
         "passwordHash": "$y$j9T$zu47d5SdBG7Ow.rkDBxf51$lPnl.mCgX2IRF48ee2sWF7j/vHt6Y1aTnTS2gGb.va5"
       }
     ]
@@ -27,7 +27,7 @@
         "overwrite": true,
         "path": "/etc/NetworkManager/system-connections/enp1s0.nmconnection",
         "contents": {
-          "source": "data:,%5Bconnection%5D%0Atype%3Dethernet%0Aid%3D%22Wired%20connection%201%22%0Ainterface-name%3Denp0s3%0A%0A%5Bipv4%5D%0Amethod%3Dmanual%0Aaddresses%3D192.168.1.1%0Agateway%3D192.168.1.254%0A"
+          "source": "data:,%5Bconnection%5D%0Atype%3Dethernet%0Aid%3D%22Wired%20connection%201%22%0Ainterface-name%3Denp0s3%0A%0A%5Bipv4%5D%0Amethod%3Dmanual%0Aaddresses%3D192.168.1.1%0A"
         },
         "mode": 384
       }
