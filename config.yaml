@@ -6,7 +6,7 @@ passwd:
       groups:
         - wheel
         - sudo
-      password_hash: $y$j9T$zu47d5SdBG7Ow.rkDBxf51$lPnl.mCgX2IRF48ee2sWF7j/vHt6Y1aTnTS2gGb.va5
+      password_hash: $y$j9T$19M6OT2s4HWfknsnmZX4x/$zkVEI1GfVI2r15T6dF6q54dv1HfrySzn6C65FVDQus0
 storage:
   files:
     - path: /etc/hostname
